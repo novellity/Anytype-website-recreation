@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* For Montserrat: 
+Use a value from 100 to 900 */
+/* For Bodoni Moda: 
+Use a value from 400 to 900 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Montserrat;
+}
+
+.nav-bar {
+    background-color: palegoldenrod;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-bar li {
+    height: 50px;
+}
+
+.nav-bar a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar a:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-bar li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 250px;
+    z-index: 999;
+    background-color: rgba(225, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%
+}
+.sidebar a {
+    width: 100%
+}
