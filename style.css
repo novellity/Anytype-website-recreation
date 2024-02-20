@@ -14,10 +14,14 @@ Use a value from 400 to 900 */
 body {
     min-height: 100vh;
     font-family: Montserrat;
+    background-image: url(./images/pexels-luciann-photography-3580532.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .nav-bar {
-    background-color: palegoldenrod;
+    background-color: whitesmoke;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,18 +54,18 @@ body {
     margin-right: auto;
 }
 
-.sidebar {
+.nav-bar .sidebar {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    max-width: 250px;
+    width: 250px;
     z-index: 999;
-    background-color: rgba(225, 255, 255, 0.2);
+    background-color: white(225, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column-reverse;
+    display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
@@ -71,4 +75,36 @@ body {
 }
 .sidebar a {
     width: 100%
+}
+
+.nav-bar .sidebar li:first-child {
+    margin-left: 65%;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+@media(max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-bar .sidebar li:first-child {
+        margin-left: 65%;
+    }
+}
+
+@media(max-width: 400px) {
+    .nav-bar .sidebar {
+        width: 100%;
+    }
+
+    .nav-bar .sidebar li:first-child {
+        margin-left: 78%;
+    }
 }
