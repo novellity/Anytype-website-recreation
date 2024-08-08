@@ -16,6 +16,8 @@ body {
     font-family: Montserrat;
 }
 
+/* Code for the nav bar */
+
 .nav-bar {
     background-color: palegoldenrod;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -30,7 +32,7 @@ body {
 }
 
 .nav-bar li {
-    height: 50px;
+    height: 70px;
 }
 
 .nav-bar a {
@@ -40,17 +42,40 @@ body {
     color: black;
     display: flex;
     align-items: center;
+    font-size: 13px;
+    
 }
 
 .nav-bar a:hover {
     background-color: #f0f0f0;
+    cursor: pointer;
 }
 
 .nav-bar li:first-child {
     margin-right: auto;
 }
 
-.sidebar {
+
+.nav-bar li:nth-child(2) {
+    margin-right: auto
+}
+
+.nav-bar span {
+    margin-left: 8px;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+ul li a p {
+    padding-right: 10px;
+}
+
+/* Code for sidebar */
+
+.nav-bar .sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -60,8 +85,8 @@ body {
     background-color: rgba(225, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column-reverse;
+    display: none;
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
@@ -71,4 +96,83 @@ body {
 }
 .sidebar a {
     width: 100%
+}
+
+.nav-bar .sidebar li:first-child {
+    margin-left: 65%;
+}
+
+/* CODE FOR THE BOTTOM NAV BAR */
+
+.bottom-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 73vh 0vh 0vh 0vh;
+    z-index: 800;
+}
+
+
+.bottom-bar ul, .bottom-bar a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+.bottom-bar {
+    position: fixed;
+    background-color: rgba(67, 67, 67, 0.2);
+    backdrop-filter: blur(5px);
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+}
+
+.bottom-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bottom-bar li {
+    padding: 18px 18px 18px 18px;
+    font-size: 15px;
+}
+
+/* CODE FOR THE HEADER DIV */
+
+.grid-container .header-div {
+    grid-area: header;
+}
+
+.header-div img {
+    width: 500px;
+    height: auto;
+}
+
+.grid-container .sidebar1 {
+    grid-area: sidebar1;
+}
+
+.grid-container .sidebar2 {
+    grid-area: sidebar2;
+}
+
+.grid-container .sidebar3 {
+    grid-area: sidebar3;
+}
+
+.grid-container {
+    display: grid;
+    border: 1px solid black;
+    margin: 10px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "sidebar1 sidebar2 sidebar3"
 }
